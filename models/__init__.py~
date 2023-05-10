@@ -1,0 +1,4 @@
+from models.engine.file_storage import FileStorage
+from .base_models import Basemodels
+storage = FileStorage()
+storage.reload()
