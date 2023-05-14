@@ -1,6 +1,12 @@
 import json
 from datetime import datetime
 from models.base_model import BaseModel
+from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
 
 class DateTimeEncoder(json.JSONEncoder):
     """
@@ -54,7 +60,6 @@ class FileStorage:
                         dict_from_file = json.loads(content)
                     except json.decoder.JSONDecodeError:
                         pass
-                
                 for file_key, dict_obj in dict_from_file.items():
                     if file_key not in FileStorage.__objects.keys():
                         className = dict_obj["__class__"]
@@ -62,3 +67,23 @@ class FileStorage:
                         self.new(newInst)
         except FileNotFoundError:
             pass
+    @staticmethod
+    def classes():
+        """ Returns a dict of classes """
+        from models.base_model import BaseModel
+        from models.user import User
+        from models.state import State
+        from models.city import City
+        from models.amenity import Amenity
+        from models.place import Place
+        from models.review import Review
+        list_classes = {
+            "BaseModel": BaseModel,
+            "User": User,
+            "State": State,
+            "City": City,
+            "Amenity": Amenity,
+            "Place": Place,
+            "Review": Review
+        }
+        return list_classes
