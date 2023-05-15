@@ -4,25 +4,26 @@ import unittest
 from models.base_model import BaseModel
 
 class TestBaseModel(unittest.TestCase):
-    test_model = BaseModel()
-    
-    def check_to_dict_return_type(self):
-        self.assertIsInstance(test_model.to_dict(), dict)
+    def setUp(self):
+        self.prototype = BaseModel()
+        print('set up')
+        
+    def test_save(self):
+        obj1 = self.prototype.updated_at
+        self.prototype.save()
+        obj2 = self.prototype.updated_at
+        self.assertNotEqual(obj1, obj2)
+    def test_to_dict(self):
+        self.assertIsInstance(self.prototype.to_dict(), dict)
 
-    def check_str_return_type(self):
-        self.assertIsInstance(test_model.__str__(), str)
+    def test___str__(self):
+        self.assertIsInstance(self.prototype.__str__(), str)
 
-    def check_save(self):
-        test_model.update_at()
-        def compare_datetime(self):
-            self.assertNotEqual(test_model.create_at, test_model.update_at)
-
-    def check_len_of_datetime(self):
-        self.assertEqual(len(test_model.created_at, 26))
-        self.assertEqual(len(test_model.updated_at, 26))
-
-    
-
+    def test___init__(self):
+        prototype = BaseModel(my_buddy='Tonny')
+        self.assertEqual('Tonny', prototype.my_buddy)
+        self.assertTrue(BaseModel.id)
+        
 
 if __name__ == '__main__':
     unittest.main()
