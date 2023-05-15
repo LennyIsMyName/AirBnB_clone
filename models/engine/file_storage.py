@@ -52,6 +52,11 @@ class FileStorage:
             json.dump(json_obj, file, indent=2, cls=DateTimeEncoder)
 
     def reload(self):
+        """
+        deserializes the JSON file to __objects (only \
+                if the JSON file (__file_path)\
+                exists ; otherwise, do nothing.
+        """
         try:
             with open(FileStorage.__file_path, mode="r") as file:
                 content = file.read()

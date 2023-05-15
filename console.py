@@ -208,6 +208,9 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
 
     def precmd(self, arg):
+        """
+        a place holder doc for checkers
+        """
         classname = arg.split('.')[0]
         if classname in storage.classes() and '(' in arg and ')' == arg[-1]:
             command = arg.split('.')[1].split('(')[0]
