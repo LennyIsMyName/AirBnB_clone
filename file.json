@@ -9,5 +9,54 @@
     "last_name": "",
     "update_at": "2023-05-14T20:17:12.431351",
     "__class__": "User"
+  },
+  "BaseModel.acb3ce0d-6eca-47ad-a70a-31c3b81d238e": {
+    "id": "acb3ce0d-6eca-47ad-a70a-31c3b81d238e",
+    "created_at": "2023-05-15T19:10:13.887987",
+    "updated_at": "2023-05-15T19:10:13.887987",
+    "update_at": "2023-05-15T19:10:13.909769",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.7400708e-194c-4607-a8a3-2f557afad18a": {
+    "id": "7400708e-194c-4607-a8a3-2f557afad18a",
+    "created_at": "2023-05-15T19:16:40.797611",
+    "updated_at": "2023-05-15T19:16:40.797611",
+    "update_at": "2023-05-15T19:16:40.798375",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.210e1f48-2885-47bc-80c2-db303b8e1897": {
+    "id": "210e1f48-2885-47bc-80c2-db303b8e1897",
+    "created_at": "2023-05-15T19:16:43.340836",
+    "updated_at": "2023-05-15T19:16:43.340836",
+    "update_at": "2023-05-15T19:16:43.341185",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.be31ae75-e302-4073-b224-3f5930b1c694": {
+    "id": "be31ae75-e302-4073-b224-3f5930b1c694",
+    "created_at": "2023-05-15T19:16:48.561420",
+    "updated_at": "2023-05-15T19:16:48.561420",
+    "update_at": "2023-05-15T19:16:48.562318",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.e7db3a8b-35a8-4712-8fae-b37487779f78": {
+    "id": "e7db3a8b-35a8-4712-8fae-b37487779f78",
+    "created_at": "2023-05-15T19:16:50.243941",
+    "updated_at": "2023-05-15T19:16:50.243941",
+    "update_at": "2023-05-15T19:16:50.244855",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.dd8c96c6-0a41-4806-aceb-20ee376fa196": {
+    "id": "dd8c96c6-0a41-4806-aceb-20ee376fa196",
+    "created_at": "2023-05-15T19:16:50.873964",
+    "updated_at": "2023-05-15T19:16:50.873964",
+    "update_at": "2023-05-15T19:16:50.874870",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.7feb756e-e5a3-45ec-95e3-3721f2df0c19": {
+    "id": "7feb756e-e5a3-45ec-95e3-3721f2df0c19",
+    "created_at": "2023-05-15T19:16:52.484415",
+    "updated_at": "2023-05-15T19:16:52.484415",
+    "update_at": "2023-05-15T19:16:52.485373",
+    "__class__": "BaseModel"
   }
 }

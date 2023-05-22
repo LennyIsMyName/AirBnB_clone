@@ -8,6 +8,7 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
+
 class DateTimeEncoder(json.JSONEncoder):
     """
     Custom JSON encoder that can handle datetime objects
@@ -17,6 +18,7 @@ class DateTimeEncoder(json.JSONEncoder):
             return obj.isoformat()
         else:
             return super().default(obj)
+
 
 class FileStorage:
     """
@@ -39,7 +41,6 @@ class FileStorage:
         new_key = "{}.{}".format(dict_attrs["__class__"], dict_attrs["id"])
         self.__objects[new_key] = obj
 
-
     def save(self):
         """
         Serializes the __obj dict to a json file
@@ -51,6 +52,11 @@ class FileStorage:
             json.dump(json_obj, file, indent=2, cls=DateTimeEncoder)
 
     def reload(self):
+        """
+        deserializes the JSON file to __objects (only \
+                if the JSON file (__file_path)\
+                exists ; otherwise, do nothing.
+        """
         try:
             with open(FileStorage.__file_path, mode="r") as file:
                 content = file.read()
@@ -67,6 +73,7 @@ class FileStorage:
                         self.new(newInst)
         except FileNotFoundError:
             pass
+
     @staticmethod
     def classes():
         """ Returns a dict of classes """

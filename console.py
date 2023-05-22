@@ -13,9 +13,11 @@ storage = models.FileStorage()
 
 """ class HBNBCommand containing a command interpreter """
 
+
 class HBNBCommand(cmd.Cmd):
     """  inherits from cmd module """
     prompt = "(hbnb) "
+
     def do_quit(self, arg):
         
         """ Quit command to exit the program"""
@@ -28,7 +30,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self, arg):
         """
-        Create a new instance of BaseModel, saves it to the JSON file, and prints the id
+        Create a new instance of BaseModel,
+        saves it to the JSON file, and prints the id
 
         """
         if not arg:
@@ -206,6 +209,9 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
 
     def precmd(self, arg):
+        """
+        a place holder doc for checkers
+        """
         classname = arg.split('.')[0]
         if classname in storage.classes() and '(' in arg and ')' == arg[-1]:
             command = arg.split('.')[1].split('(')[0]
@@ -235,6 +241,7 @@ class HBNBCommand(cmd.Cmd):
                         return f"{command} {classname} {id} {a} {value}"
                 return f"{command} {classname}"
         return arg
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
