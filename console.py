@@ -17,6 +17,7 @@ class HBNBCommand(cmd.Cmd):
     """  inherits from cmd module """
     prompt = "(hbnb) "
     def do_quit(self, arg):
+        
         """ Quit command to exit the program"""
         return True
 
