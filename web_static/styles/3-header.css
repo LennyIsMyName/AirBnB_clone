@@ -4,12 +4,11 @@ header {
 	flex-grow: 1;
 	height: 70px;
 	width: 100%;
-	padding-left: 20px;
 	border-bottom: 1px solid #CCCCCC;
-	justify-content: flex-left;
 	align-items: center;
 }
 
 header div {
-  content: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/logo.png);
+	content: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/logo.png);
+	padding-left: 20px;
 }
